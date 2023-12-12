@@ -1,4 +1,27 @@
 <div class="wrapper">
-  <%= render "side_bar" %>
-  <%= render "main_chat"%>
+  <div class="side-bar">
+    <%= render "side_bar" %>
+  </div>
+  <div class="chat">
+    <%= render "main_chat"%>
+  </div>
 </div>
+
+wrapper ←親
+ |
+ |----side ←子
+ |      |--------side-bar-header ←孫
+        |--------rooms ←孫
+ |----main ←子
+ |      |--------chat-header ←孫
+ |      |--------messages ←孫
+        |--------form ←孫
+
+
+wrapper ←親
+  |
+  |--------side-bar-header ←子
+  |--------rooms  ←子
+  |--------chat-header  ←子
+  |--------messages  ←子
+  |--------form  ←子
